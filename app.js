@@ -4,7 +4,6 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
-
 app.use(morgan('express'));
 
 const apps = require('./playstore.js')
@@ -54,6 +53,5 @@ app.get('/apps', (req, res) => {
         .json(results);
 })
 
-app.listen(8000, () => {
-    console.log('Server is running on PORT 8000');
-})
+
+module.exports = app; 
